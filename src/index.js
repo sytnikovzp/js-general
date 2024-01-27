@@ -1,42 +1,60 @@
 "use strict";
 
-// let abc = "str";
+// let srtNum = '11';
 
-// console.log(abc);
+// console.log(parseInt(srtNum, 2));
+// console.log(Number(srtNum));
 
-// let a = 30,
-//   d = 40,
-//   e = 50;
-// const b = 20;
+// console.log(String(true));
+// console.log(Boolean(null));
 
-// console.log(a + b);
-// console.log(a);
+// console.log(NaN === NaN);
 
-// let getFirstName = (null){};
+// console.log(+srtNum);
 
-// const MATH_PI = Math.PI;
-// const COLOR = "#0f0a00";
+// console.log('258' - 10);
+// console.log('258' > 10);
 
+// console.log('123' == 123);
+// console.log('123' === 123);
 
-// console.log(2 ** 53 -1);
+// console.log(true + false);
 
-let num = 0;
-let bigNum = 20n;
-let str = '';
+// console.log(!!0);
 
-// const user = {
-//   name: 'John',
-//   age: 20, 
-//   isMarried: true,
-//   address: {
-//     street: 'ddg',
-//     city: 'fogdfg',
-//   },
-// };
+// alert('Hi');
+// confirm('Are you ready?');
+// prompt('Enter Number');
+// console.log(Number(prompt('Enter Number')));
 
-console.log(typeof bigNum);
-console.log(typeof num);
-console.log(typeof str);
-console.log(typeof null);
-console.log(typeof NaN);
-console.log(2 / 0);
+// Conditions
+
+let cret = 1200;
+
+let rating = 1200;
+
+// if (rating > cret) {
+//   console.log("Its so hight rating!");
+// } else if (rating < cret) {
+//   console.log("Its so low rating! :(");
+// } else console.log("Its equal!");
+
+// Switch
+let variant = NaN;
+let result = typeof variant;
+
+switch (result) {
+  case 'string': 
+      console.log(`${variant} is a string`);
+      break;
+  case 'number': 
+      console.log(`${variant} is a number`);
+      break;
+  case 'boolean': 
+      console.log(`${variant} is a boolean`);
+      break;
+  case 'object': 
+      console.log(`${variant} is a object`);
+      break;
+  default: console.log(`${variant} is an unknown`);
+}
