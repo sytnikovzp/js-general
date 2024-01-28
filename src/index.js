@@ -39,22 +39,51 @@ let rating = 1200;
 //   console.log("Its so low rating! :(");
 // } else console.log("Its equal!");
 
-// Switch
-let variant = NaN;
-let result = typeof variant;
+// // Switch
+// let variant = NaN;
+// let result = typeof variant;
 
-switch (result) {
-  case 'string': 
-      console.log(`${variant} is a string`);
-      break;
-  case 'number': 
-      console.log(`${variant} is a number`);
-      break;
-  case 'boolean': 
-      console.log(`${variant} is a boolean`);
-      break;
-  case 'object': 
-      console.log(`${variant} is a object`);
-      break;
-  default: console.log(`${variant} is an unknown`);
+// switch (result) {
+//   case 'string': 
+//       console.log(`${variant} is a string`);
+//       break;
+//   case 'number': 
+//       console.log(`${variant} is a number`);
+//       break;
+//   case 'boolean': 
+//       console.log(`${variant} is a boolean`);
+//       break;
+//   case 'object': 
+//       console.log(`${variant} is a object`);
+//       break;
+//   default: console.log(`${variant} is an unknown`);
+// }
+
+// Switch with multiply case
+
+// birds: sparrow, hawk, falcon, eagle, owl
+// fishes: salmon, pike, carp, crucian, shark, tuna
+// mammalia: dog, cat, whale, horse, human
+
+let creature = 'cat';
+
+switch(creature){
+    case 'sparrow':
+    case 'hawk':
+    case 'falcon':
+    case 'eagle':
+    case 'owl':
+        console.log('Its a bird');
+        break;
+    case 'salmon':
+    case 'pike':
+    case 'carp':
+    case 'crucian':
+    case 'shark':
+    case 'tuna':
+        console.log('Its a fishes');
+        break;    
+    default:
+        console.log('Its a unknown creature');
 }
+
