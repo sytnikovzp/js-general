@@ -1,40 +1,49 @@
 'use strict';
 
-// Leap Year
+// Lopps
 
-let year = Number(prompt('Enter year, please'));
+// While
 
-console.log(year);
+let count = 12;
 
-// Strangeness of isNaN()
-// console.log(Number.isNaN(NaN));
-
-// if (Number.isNaN(year)){
-//   console.log('Entered wrong data');
-// } else if (year % 100 === 0){
-//     if(year % 400 === 0){
-//       console.log('This is a leap year');
-//     } else {
-//       console.log('This is not a leap year');
-//     }
-// } else if (year % 4 === 0 && year > 4){
-//       console.log('This is a leap year')
-// } else {
-//   console.log('This is not a leap year');
+// while(count < 10){
+//   console.log(count);
+//   count++;
 // }
 
-// With && and ||
+// do while
 
-if (Number.isNaN(year)){
-    console.log('Entered wrong data');
-  } else {
-    year % 4 === 0 && 
-    (year % 100 !== 0 || year % 400 === 0) &&
-      year > 4 &&
-      console.log('It is a leap year');
+// do {
+//   console.log(count);
+//   count--;
+// } while (count < 10);
 
-      (year % 4 === 0 && 
-        (year % 100 !== 0 || year % 400 === 0) &&
-        year > 4) || 
-        console.log('This is not a leap year');
-  }
+// For
+
+let i = 1;
+
+// for(; i < 10; i++){
+//   console.log(`${i * 2}`);
+// }
+
+
+// for(; ; ){
+//   console.log(`${i * 2}`);
+//   i++;
+//   if(i >= 10) break;
+// }
+
+// for(let i = 1; i < 10; i++){
+//   if(i === 5) continue; // iteration no 
+//   console.log(`${i * 2}`);
+// }
+
+// Multiply table
+
+// outer: for(let i = 1; i < 10; i++){
+//   inner: for(let j = 1; j < 10; j++){
+//     if (i === 5) continue outer;
+//     if (j === 5) continue;
+//     console.log(`${i} x ${j} = ${i * j}`);
+//   }
+// }
