@@ -26,7 +26,6 @@ let i = 1;
 //   console.log(`${i * 2}`);
 // }
 
-
 // for(; ; ){
 //   console.log(`${i * 2}`);
 //   i++;
@@ -34,7 +33,7 @@ let i = 1;
 // }
 
 // for(let i = 1; i < 10; i++){
-//   if(i === 5) continue; // iteration no 
+//   if(i === 5) continue; // iteration no
 //   console.log(`${i * 2}`);
 // }
 
@@ -47,3 +46,14 @@ let i = 1;
 //     console.log(`${i} x ${j} = ${i * j}`);
 //   }
 // }
+
+// Task summ until 100
+
+let number = 10;
+let result = 0;
+
+for (number; number <= 100; number++) {
+  result += number;
+}
+
+console.log(result);
