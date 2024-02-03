@@ -120,3 +120,18 @@
 
 // const result = calculate(userInput1, userInput2, mathOperation);
 // console.log(result);
+
+// No pure function
+// const noPureFunction = (a, b) => {
+//   a = a * Math.random();
+//   return a + b;
+// };
+
+// console.log(noPureFunction(10, 20));
+
+// let c = 10;
+
+// const add1 = (d) => (c += d);
+
+// console.log(add1(10));
+// console.log(c);
