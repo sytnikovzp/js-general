@@ -135,3 +135,53 @@
 
 // console.log(add1(10));
 // console.log(c);
+
+// Stack
+
+// debugger
+
+// function greet(person){
+//   console.log(`Hello ${person}`)
+// }
+
+// greet('John');
+// console.log('Bye-bye')
+
+// Maximum
+
+
+// // debugger
+// function chicken(){
+//   return egg();
+// }
+
+// function egg(){
+//   return chicken();
+// }
+
+// console.log(chicken());
+
+// Documentation JSDoc
+
+/**
+ * 
+ * @param {number} ballAmount 
+ * @param {number} wall 
+ * @param {number} diameter 
+ * @returns {number} - amount of volumes
+ */
+
+function getVolumes(ballAmount, wall, diameter){
+  let result = 0;
+  for(let i = 1; i <= ballAmount; i++){
+    let innerDiam = diameter + 2 * wall * (i-2);
+    let volume = Math.PI * innerDiam ** 3 / 6;
+    result += volume;
+  }
+  return result.toFixed(5);
+}
+
+const volumes = getVolumes(12,0.01,0.5);
+console.log(volumes);
+
+getVolumes()
