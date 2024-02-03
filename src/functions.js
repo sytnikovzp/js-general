@@ -20,26 +20,54 @@
 
 // Check Age
 
-let age = 20;
-let welcome = function () {};
+// let age = 20;
+// let welcome = function () {};
 
-if (age < 18) {
-  function welcome() {
-    console.log('you are too much young');
-  }
-  welcome();
-} else {
-  function welcome() {
-    console.log('you are enough adult');
-  }
-  welcome();
-}
+// if (age < 18) {
+//   function welcome() {
+//     console.log('you are too much young');
+//   }
+//   welcome();
+// } else {
+//   function welcome() {
+//     console.log('you are enough adult');
+//   }
+//   welcome();
+// }
 
 // welcome();
 
 // Arrow function
 
-const function3 = (par) => {
-  console.log(par);
-  return par * 2;
-};
+// const function3 = (par) => {
+//   console.log(par);
+//   return par * 2;
+// };
+
+// Change global var as param
+
+// let brand  = 'Stiga';
+// let ttBlade = 'Donic';
+
+// function changeArg(brand = 'TSP', ttBlade = 'Xiom'){
+//   // brand = 'Butterfly';
+//   // ttBlade = 'DHS';
+//   console.log(brand);
+//   console.log(ttBlade);
+//   return `${brand} + ${ttBlade}`;
+
+//   // return (
+//   //   `${brand} + ${ttBlade}`
+//   //   );
+// }
+
+// // changeArg();
+// console.log(changeArg());
+// console.log(brand);
+// console.log(ttBlade);
+
+function add(a, b){
+  return a + b;
+}
+
+console.log(add);
