@@ -66,8 +66,57 @@
 // console.log(brand);
 // console.log(ttBlade);
 
-function add(a, b){
-  return a + b;
-}
+// function add(a, b){
+//   return a + b;
+// }
 
-console.log(add);
+// console.log(add);
+
+// Calculator
+
+// const sum = (a, b) => a + b;
+// const sub = (a, b) => a - b;
+// const div = (a, b) => a / b;
+// const mul = (a, b) => a * b;
+
+// const calculate = (num1, num2, mathOperation) => {
+//   if (Number.isNaN(num1 - num2)) {
+//     return 'Plz, Enter number!';
+//   }
+
+//   let operation;
+
+//   switch (mathOperation) {
+//     case '+': {
+//       operation = sum;
+//       brake;
+//     }
+//     case '-': {
+//       operation = sub;
+//       brake;
+//     }
+//     case '/': {
+//       operation = div;
+//       brake;
+//     }
+//     case '*': {
+//       operation = mul;
+//       brake;
+//     }
+//     default:
+//       console.log('Unknown math operation');
+//   }
+
+//   if (typeof operation === 'function') {
+//     return operation(num1, num2);
+//   } else {
+//     return 'Unknown math operation';
+//   }
+// };
+
+// const userInput1 = Number(prompt('Enter first number'));
+// const userInput2 = Number(prompt('Enter second number'));
+// const mathOperation = prompt('Enter math operaion');
+
+// const result = calculate(userInput1, userInput2, mathOperation);
+// console.log(result);
