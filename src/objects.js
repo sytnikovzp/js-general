@@ -49,21 +49,27 @@
 let color = 'green';
 
 const car = {
-  brand: 'BMW',
+  brand: 'Toyota',
   model: 'avalon',
   'year of relise': 1995,
   transmission: 'mechanics',
   isWell: true,
   color,
   run(driver) {
-    return `Run and drive ${driver}`;
+    return `Run and drive ${driver} on ${this.brand} ${this.model}`;
   },
-  1: 1,
+  go: (driver) => {
+    return `Run and drive ${driver} on ${this.brand} ${this.model}`;
+  },
 };
 
 // console.log(car);
 
 // console.log(car.run('Bill'));
+
+// console.log(`========================`)
+
+// console.log(car.go('Bill'));
 
 // console.log('color' in car);
 
@@ -108,17 +114,56 @@ const car3 = car;
 
 // Function isEmpty
 
-function checkEmpty(obj) {
-  for (let prop in obj) {
-    return false;
-  }
-  return true;
+// function checkEmpty(obj) {
+//   for (let prop in obj) {
+//     return false;
+//   }
+//   return true;
+// }
+
+// const emptyObj = {};
+
+// console.log(checkEmpty(car));
+// console.log(checkEmpty(emptyObj));
+
+// console.log(Object.keys(car));
+// console.log(Object.keys(emptyObj).length === 0);
+
+// THIS
+
+const desktop = {
+  brand: 'Intel',
+};
+
+const laptop = {
+  brand: 'Dell',
+};
+
+function showBrand() {
+  return this.brand;
 }
 
-const emptyObj = {};
+function func() {
+  return this;
+}
 
-console.log(checkEmpty(car));
-console.log(checkEmpty(emptyObj));
+const arrowFunc = () => this;
 
-console.log(Object.keys(car));
-console.log(Object.keys(emptyObj).length === 0);
+const bindArrow = func.bind(laptop);
+
+// laptop.show = arrowFunc;
+// desktop.show = func;
+
+laptop.show = showBrand;
+desktop.show = showBrand;
+
+// console.log(func());
+// console.log(arrowFunc());
+
+console.log(laptop.show());
+console.log(desktop.show.call(car));
+
+const bindShow = laptop.show.bind(car);
+
+// console.log(typeof bindShow)
+console.log(bindShow());
