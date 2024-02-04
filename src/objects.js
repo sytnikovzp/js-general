@@ -1,37 +1,124 @@
 'use strict';
 
-const user = {
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 20,
-  login: 'j_d',
-  email: 'j_d@gmail.com',
-  isMarried: true,
+// let title = 'MS';
+// const sportsmen = {
+//   [title]: 'MS',
+// };
+
+// console.log(sportsmen);
+
+// function setTitle(rate) {
+//   let title;
+//   let address = 'Ukraine';
+//   if (rate >= 60) {
+//     title = 'MS';
+//   } else if (rate >= 40 && rate < 60) {
+//     title = 'KMS';
+//   } else {
+//     title = 'ordinary sportsmen';
+//   }
+//   const sportsmen = {
+//     [title]: title,
+//     address,
+//   };
+//   return sportsmen;
+// }
+
+// console.log(setTitle(45));
+
+// const user = {
+//   name: 'John',
+//   // say: function(){
+//   //   return 'Hello everybody';
+//   // }
+
+//   // say(){
+//   //   return 'Hello everybody';
+//   // }
+
+// }
+
+// user.say = function(){
+//   return 'Hello everybody';
+// }
+
+// // console.log(user.say());
+
+// Car
+
+let color = 'green';
+
+const car = {
+  brand: 'BMW',
+  model: 'avalon',
+  'year of relise': 1995,
+  transmission: 'mechanics',
+  isWell: true,
+  color,
+  run(driver) {
+    return `Run and drive ${driver}`;
+  },
   1: 1,
-  2: 2,
-  'home address': 'Dnipro',
 };
 
-console.log(user);
+// console.log(car);
 
-const person = new Object(user);
+// console.log(car.run('Bill'));
 
-// const arr = new Object(Array());
-// console.log(arr);
+// console.log('color' in car);
 
-console.log(person);
+// console.log(`========================`)
 
-console.log(person === user);
+// // For ... in
 
-// CRUD
-// Create Read Update Delete
+// for(let key in car){
+//   // console.log(key);
+//   if(typeof car[key] !== 'function'){
+//   console.log(`key ${key} = ${car[key]}`);
+//   }
+// }
 
-console.log(user.firstName);
+// Copy of object
 
-user.phone = '+38 097 699 33 54';
+const car2 = {
+  brand: 'Toyota',
+  model: 'avalon',
+  'year of relise': 1995,
+  transmission: 'mechanics',
+  isWell: true,
+  color,
+  run(driver) {
+    return `Run and drive ${driver}`;
+  },
+  1: 1,
+};
 
-user.age = 21;
+// console.log(car2);
 
-console.log(user['home address']);
+const car3 = car;
+// console.log(car3);
 
-delete user[2];
+// console.log(car === car2); // compare address, copy by address
+// console.log(car === car3); // copy by link
+
+// console.log('===============================')
+
+// console.log(car)
+// console.log(car2)
+
+// Function isEmpty
+
+function checkEmpty(obj) {
+  for (let prop in obj) {
+    return false;
+  }
+  return true;
+}
+
+const emptyObj = {};
+
+console.log(checkEmpty(car));
+console.log(checkEmpty(emptyObj));
+
+console.log(Object.keys(car));
+console.log(Object.keys(emptyObj).length === 0);
