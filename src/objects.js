@@ -183,6 +183,35 @@ function Car(brand, model, transmission = 'auto', color = 'white') {
 const bmw = new Car('BMW', 'X5', 'auto', 'black');
 const toyota = new Car('Toyota', 'Camry');
 
-
 console.log(bmw);
-console.log(toyota)
+console.log(toyota);
+
+// Multiply price
+
+const price = {
+  tea: 20,
+  coffee: 30,
+  meal: 50,
+  onion: 10,
+  waiter: 'John Doe',
+  isPaid: false,
+};
+
+for (let key in price) {
+  console.log(`${key} : ${price[key]}`);
+}
+
+console.log('====================');
+
+function multPrice(bill){
+  for(let key in bill)
+  if(typeof bill[key] === 'number'){
+    bill[key] *= 2;
+  }
+}
+
+multPrice(price)
+
+for (let key in price) {
+  console.log(`${key} : ${price[key]}`);
+}
