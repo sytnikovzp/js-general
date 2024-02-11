@@ -149,7 +149,6 @@
 
 // Maximum
 
-
 // // debugger
 // function chicken(){
 //   return egg();
@@ -164,10 +163,10 @@
 // Documentation JSDoc
 
 // /**
-//  * 
-//  * @param {number} ballAmount 
-//  * @param {number} wall 
-//  * @param {number} diameter 
+//  *
+//  * @param {number} ballAmount
+//  * @param {number} wall
+//  * @param {number} diameter
 //  * @returns {number} - amount of volumes
 //  */
 
@@ -188,9 +187,43 @@
 
 // Counter
 
-function counter(){
-  let count = 0;
-  return ++count;
-}
+// function counter(){
+//   let count = 0;
+//   return ++count;
+// }
 
-console.log(counter());
+// console.log(counter());
+
+// Recursion
+
+// Fibonacci
+// 1,1,2,3,5,8,13...
+
+// Iterration
+
+// function fib(n){
+//   let fib1 = 1;
+//   let fib2 = 1;
+//   for(let i = 3; i <= n; i++){
+//     const fibNext = fib1 + fib2;
+//     fib1 = fib2;
+//     fib2 = fibNext;
+//   }
+//   return fib2;
+// }
+
+// console.log(fib(7))
+
+// Fib Recursion
+
+// function fibonacci(position) {
+//   if (position < 3) {
+//     return 1;
+//   }
+//   return fibonacci(position - 1) + fibonacci(position - 2);
+// }
+
+// console.log(fibonacci(4))
+
+
+

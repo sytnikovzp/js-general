@@ -170,48 +170,101 @@
 
 // CONSTRUCTOR
 
-function Car(brand, model, transmission = 'auto', color = 'white') {
-  this.brand = brand;
-  this.model = model;
-  this.transmission = transmission;
-  this.color = color;
-  this.run = function () {
-    return `Run and drive on ${this.brand} ${this.model}`;
-  };
-}
+// function Car(brand, model, transmission = 'auto', color = 'white') {
+//   this.brand = brand;
+//   this.model = model;
+//   this.transmission = transmission;
+//   this.color = color;
+//   this.run = function () {
+//     return `Run and drive on ${this.brand} ${this.model}`;
+//   };
+// }
 
-const bmw = new Car('BMW', 'X5', 'auto', 'black');
-const toyota = new Car('Toyota', 'Camry');
+// const bmw = new Car('BMW', 'X5', 'auto', 'black');
+// const toyota = new Car('Toyota', 'Camry');
 
-console.log(bmw);
-console.log(toyota);
+// console.log(bmw);
+// console.log(toyota);
 
-// Multiply price
+// // Multiply price
 
-const price = {
-  tea: 20,
-  coffee: 30,
-  meal: 50,
-  onion: 10,
-  waiter: 'John Doe',
-  isPaid: false,
-};
+// const price = {
+//   tea: 20,
+//   coffee: 30,
+//   meal: 50,
+//   onion: 10,
+//   waiter: 'John Doe',
+//   isPaid: false,
+// };
 
-for (let key in price) {
-  console.log(`${key} : ${price[key]}`);
-}
+// for (let key in price) {
+//   console.log(`${key} : ${price[key]}`);
+// }
 
-console.log('====================');
+// console.log('====================');
 
-function multPrice(bill){
-  for(let key in bill)
-  if(typeof bill[key] === 'number'){
-    bill[key] *= 2;
-  }
-}
+// function multPrice(bill){
+//   for(let key in bill)
+//   if(typeof bill[key] === 'number'){
+//     bill[key] *= 2;
+//   }
+// }
 
-multPrice(price)
+// multPrice(price)
 
-for (let key in price) {
-  console.log(`${key} : ${price[key]}`);
-}
+// for (let key in price) {
+//   console.log(`${key} : ${price[key]}`);
+// }
+
+// Math
+// console.log(Math.random() * 100);
+
+// function getRandomRange(min, max) {
+//   return Math.random() * (max - min) + min;
+// }
+
+// console.log(Number(getRandomRange(10, 100)).toFixed(3)); // after coma
+
+// console.log(Number(getRandomRange(10, 100)).toPrecision(3)); // all digital
+
+// Number
+// console.log((23094209438).toExponential());
+
+// Date
+// const date = new Date();
+// console.log(date);
+// console.log(date.toDateString());
+// console.log(date.toISOString());
+// console.log(date.toLocaleDateString());
+// console.log(Date.now());
+
+//String
+
+let sams = ' Samsung';
+let gap = ' ';
+let nokia = 'Nokia ';
+
+let together = sams.concat(gap, nokia);
+let end = nokia.padEnd(20, '/\\');
+
+console.log(sams.length);
+console.log(sams.charAt(5)); // u
+console.log(sams.charCodeAt(5)); // unicode
+console.log('----------------------');
+console.log(together);
+console.log(together.includes('a', 5));
+console.log(together.indexOf('a')); // first entires
+console.log(together.lastIndexOf('a')); // last entires
+console.log(nokia.repeat(3));
+console.log(nokia.padEnd(20, '/\\'));
+// console.log(nokia);
+// console.log(end);
+console.log('----------------------');
+console.log(together.slice(2, 5));
+console.log(together.slice(2, -2));
+console.log(together.split('', 10));
+console.log(together.split(' ', 10));
+console.log(together.toLocaleUpperCase());
+console.log(together.trim());
+console.log(together.trim().split(' ', 10));
+
