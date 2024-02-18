@@ -1,52 +1,28 @@
 'use strict';
 
-// __proto__
+function Country(title = 'Ukraine', capital = 'Kiev') {
+  this.title = title;
+  this.capital = capital;
+  // this.getInfo = function () {
+  //   return `Capital is ${this.capital}`;
+  // };
+}
 
-const animal = {
-  type: 'common',
-  limbAmount: 4,
-  move() {
-    console.log('I can move some way');
-  },
-  eat() {
-    console.log('I can eat anything');
-  },
+Country.prototype.getInfo = function () {
+  return `Capital is ${this.capital}`;
 };
 
-const mammal = {
-  type: 'mammal',
-  eat() {
-    console.log('I ate milk in My childhood');
-  },
-};
+const ukraine = new Country();
+const usa = new Country('USA', 'Washington');
 
-const cat = {
-  name: 'Cat',
-  maxWeight: 30,
-  maxAge: 20,
-  move() {
-    console.log('I can run');
-  },
-};
+console.log(ukraine.getInfo());
+console.log(usa.getInfo());
 
-mammal.__proto__ = animal;
-cat.__proto__ = mammal;
+console.log(ukraine.getInfo === usa.getInfo);
 
-console.log(mammal.limbAmount);
-console.log(cat.limbAmount);
-cat.eat();
+console.log(ukraine);
 
-const sonya = Object.create(cat, {
-  name: {
-    value: 'sonya',
-    enumerable: true,
-  },
-});
+console.log(usa instanceof Country);
+console.log(usa instanceof Array);
 
-console.log(sonya);
 
-const myArray = [10];
-const a = 110;
-
-console.log(myArray.valueOf());
-console.log(a.valueOf());
