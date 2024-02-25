@@ -51,7 +51,7 @@ const an = new Plain('plain', 300);
 
 class Car extends Vechile {
   static discount = 0.1;
-  
+
   #price;
   #priceUnit = '$';
 
@@ -92,6 +92,15 @@ class Car extends Vechile {
       ? `My ${this.brand} has ${this._tankVolume} liter of gas`
       : `Tank is full`;
   }
+
+  drive(city) {
+    // super.drive();
+    // console.log(`Go to ${city}`);
+    this._tankVolume -= 10;
+    return this._tankVolume < 0
+      ? `Tank volume is ${this._tankVolume}`
+      : 'Tank is empty';
+  }
 }
 
 const honda = new Car('sedan', 'Honda', 'CRV', 30000, 2.5);
@@ -101,5 +110,53 @@ console.log(honda._tankVolume);
 console.log(honda.price);
 honda.price = 50000;
 console.log(honda.price);
+
+// honda.drive('Kiev');
+console.log(honda.drive());
+console.log(honda.drive());
+// fillFuel;
+
 console.log(Car.isCar(honda));
 console.log(Car.getFullCarTitle(honda));
+
+// --- Array on classes ---
+
+// class MyArray {
+//   constructor(...args) {
+//     this.length = 0;
+//     for (let i = 0; i < args.length; i++) {
+//       this.push(args[i]);
+//     }
+//   }
+
+//   push(...args) {
+//     if (args) {
+//       for (let i = 0; i < args.length; i++) {
+//         this[this.length++] = args[i];
+//       }
+//     }
+//     return this.length;
+//   }
+
+//   pop() {
+//     if (this.length === 0) {
+//       return;
+//     }
+//     const lastItem = this[this.length - i];
+//     delete this[--this.length];
+//     return lastItem;
+//   }
+
+//   forEach(fn) {
+//     for (let i = 0; i < this.length; i++) {
+//       fn(this[i], i, this);
+//     }
+//   }
+
+//   concat(...args) {
+//     const res = new MyArray();
+//     this.forEach((el) => {
+//       res.push(el);
+//     });
+//   }
+// }
