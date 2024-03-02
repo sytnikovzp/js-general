@@ -80,30 +80,28 @@ const timoBoll = new Player(
   25,
   'Zaporizhzhia'
 );
-const players = [maLong, xuXin, kokiNiva, timoBoll];
+// const players = [maLong, xuXin, kokiNiva, timoBoll];
 
-const master = {
-  master: true,
+// weakmap
+
+let kouLei = {
+  fullName: 'Kou Lei',
+  age: 30,
+  rate: 85,
 };
 
-const candidat = {
-  master: false,
-};
+const players = [
+  [maLong, 'butterfly'],
+  [xuXin, 'DHS'],
+  [kokiNiva, 'Victas'],
+  [timoBoll, 'Donic'],
+  [kouLei, 'Stiga'],
+];
 
-// const result = Map.groupBy(players, ({rate, city})) =>
-//     rate < 60 ? candidat : master;
+const mapWeak = new WeakMap(players);
+console.log(mapWeak);
 
-// SET
+kouLei = null;
+console.log(mapWeak.get(kokiNiva));
+console.log(mapWeak.get(kouLei));
 
-const str = 'Donic';
-const setStr = new Set(str);
-
-console.log(setStr);
-
-const arr1 = [1, 2, 3, 4, 2, 3, 1, 5, 9, 8, 9];
-const setNumb = new Set(arr1);
-setNumb.add(NaN)
-
-console.log(setNumb);
-const arrUnic = Array.from(setNumb)
-console.log(arrUnic)
