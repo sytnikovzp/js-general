@@ -105,58 +105,80 @@ class Car extends Vechile {
 
 const honda = new Car('sedan', 'Honda', 'CRV', 30000, 2.5);
 
-console.log(honda);
-console.log(honda._tankVolume);
-console.log(honda.price);
-honda.price = 50000;
-console.log(honda.price);
+// console.log(honda);
+// console.log(honda._tankVolume);
+// console.log(honda.price);
+// honda.price = 50000;
+// console.log(honda.price);
 
-// honda.drive('Kiev');
-console.log(honda.drive());
-console.log(honda.drive());
-// fillFuel;
+// // honda.drive('Kiev');
+// console.log(honda.drive());
+// console.log(honda.drive());
+// // fillFuel;
 
-console.log(Car.isCar(honda));
-console.log(Car.getFullCarTitle(honda));
+// console.log(Car.isCar(honda));
+// console.log(Car.getFullCarTitle(honda));
 
 // --- Array on classes ---
 
-// class MyArray {
-//   constructor(...args) {
-//     this.length = 0;
-//     for (let i = 0; i < args.length; i++) {
-//       this.push(args[i]);
-//     }
-//   }
+class MyArrayIterator {
+  /**
+   *
+   * @param {MyArray} myArray
+   */
+  constructor(myArray) {
+    this.array = myArray;
+    this.count = 0;
+  }
 
-//   push(...args) {
-//     if (args) {
-//       for (let i = 0; i < args.length; i++) {
-//         this[this.length++] = args[i];
-//       }
-//     }
-//     return this.length;
-//   }
+  next() {
+    return {
+      value: this.array[this.count++],
+      done: this.count > this.array.length,
+    };
+  }
+}
 
-//   pop() {
-//     if (this.length === 0) {
-//       return;
-//     }
-//     const lastItem = this[this.length - i];
-//     delete this[--this.length];
-//     return lastItem;
-//   }
+class MyArray {
+  constructor(...args) {
+    this.length = 0;
+    for (let i = 0; i < args.length; i++) {
+      this.push(args[i]);
+    }
+  }
 
-//   forEach(fn) {
-//     for (let i = 0; i < this.length; i++) {
-//       fn(this[i], i, this);
-//     }
-//   }
+  push(...args) {
+    if (args) {
+      for (let i = 0; i < args.length; i++) {
+        this[this.length++] = args[i];
+      }
+    }
+    return this.length;
+  }
 
-//   concat(...args) {
-//     const res = new MyArray();
-//     this.forEach((el) => {
-//       res.push(el);
-//     });
-//   }
-// }
+  pop() {
+    if (this.length === 0) {
+      return;
+    }
+    const lastItem = this[this.length - i];
+    delete this[--this.length];
+    return lastItem;
+  }
+
+  forEach(fn) {
+    for (let i = 0; i < this.length; i++) {
+      fn(this[i], i, this);
+    }
+  }
+
+  concat(...args) {
+    const res = new MyArray();
+    this.forEach((el) => {
+      res.push(el);
+    });
+  }
+
+  [Symbol.Iterator]() {
+    return new MyArrayIterator(this.myArray);
+  }
+}
