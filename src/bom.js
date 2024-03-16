@@ -53,20 +53,73 @@
 
 // clock
 
-function getTime() {
-  const time = document.getElementById('time');
-  const now = new Date();
-  // console.log(now);
-  // console.log(now.getHours());
-  // console.log(now.getMinutes());
-  // console.log(now.getSeconds());
-  time.textContent = `
-  ${now.getHours() < 10 ? '0' + now.getHours() : now.getHours()}:
-  ${now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes()}:
-  ${now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds()}
-  `;
-}
+// function getTime() {
+//   const time = document.getElementById('time');
+//   const now = new Date();
+//   // console.log(now);
+//   // console.log(now.getHours());
+//   // console.log(now.getMinutes());
+//   // console.log(now.getSeconds());
+//   time.textContent = `
+//   ${now.getHours() < 10 ? '0' + now.getHours() : now.getHours()}:
+//   ${now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes()}:
+//   ${now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds()}
+//   `;
+// }
 
-// getTime();
+// // getTime();
 
-const timeId = setInterval(getTime, 1000);
+// const timeId = setInterval(getTime, 1000);
+
+// === Cookies ====
+
+// const now = new Date('03/09/24');
+
+// console.log(now.toUTCString());
+// // document.cookie = 'login=master';
+// document.cookie = `expires=${now}`
+
+// ====== local storage ===
+
+localStorage.setItem('url', 'https://www.ttspin.club/');
+localStorage.setItem('pass', 'ttspin.club/');
+localStorage.setItem('test', 'club');
+
+// console.log(localStorage.getItem('pass'));
+
+// console.log(localStorage.getItem('url'));
+localStorage.removeItem('url');
+// const remove = console.log(localStorage.getItem('url'));
+
+// console.log(remove);
+
+localStorage.clear();
+
+// console.log(localStorage)
+
+// JSON
+
+const player = {
+  name: 'Ma Long',
+  country: 'China',
+  brand: 'Stiga',
+
+  play() {
+    console.log('I am playing');
+  },
+};
+
+player.play()
+
+const jsonStringify = JSON.stringify(player);
+
+console.log(jsonStringify)
+
+localStorage.setItem('MaLong', jsonStringify);
+const malong = JSON.parse(localStorage.getItem('MaLong'));
+console.log(malong);
+
+
+const arr1 = [1,2,3,'Donic']
+
+JSON.stringify()

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- <script defer src="./src/index.js" ></script> -->
     <!-- <script defer src="./src/op-loops.js" ></script> -->
     <!-- <script defer src="./src/functions.js" ></script> -->
@@ -15,19 +15,20 @@
     <!-- <script defer src="./src/regexp.js" ></script> -->
     <!-- <script defer src="./src/map-set-error.js" ></script> -->
     <!-- <script defer src="./src/dom.js" ></script> -->
-    <!-- <script defer type="module" src="./src/events.js" ></script> -->
+    <script defer type="module" src="./src/events.js" ></script>
     <!-- <script defer type="module" src="./src/tasks.js" ></script> -->
-    <script defer type="module" src="./src/bom.js" ></script>
+    <!-- <script defer type="module" src="./src/bom.js" ></script> -->
+    <script defer type="module" src="./src/promise.js"></script>
     <title>JavaScript</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>JavaScript</h1>
     <div id="container" class="div-cont p-cont">
-        <p id="first-par" onclick="showText()">First Par</p>
-        <p id="second-par">Second Par</p>
-        <p>Third Par</p>
-        <p>Fourth Par</p>
-        <p>Fifth Par</p>
+      <p id="first-par" onclick="showText()">First Par</p>
+      <p id="second-par">Second Par</p>
+      <p>Third Par</p>
+      <p>Fourth Par</p>
+      <p>Fifth Par</p>
     </div>
     <!-- <div class="img-container">
         <img 
@@ -38,47 +39,47 @@
             >
     </div> -->
     <div class="anchors">
-        <a href="./assets/pages/rectangle.html">Rectangle</a>
-        <a href="./assets/pages/tiles.html">Tiles</a>
+      <a href="./assets/pages/rectangle.html">Rectangle</a>
+      <a href="./assets/pages/tiles.html">Tiles</a>
     </div>
     <form id="person">
-        <div>
-            <label for="f-name">First Name</label>
-            <input type="text" id="f-name" name="firstName" />
-        </div>
-        <div>
-            <label for="l-name">Last Name</label>
-            <input type="text" id="l-name" name="lastName" />
-        </div>
-        <div id="div-email">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" />
-        </div>
-        <div>
-            <label for="nick-name">Nick Name</label>
-            <input type="text" id="nick-name" name="nickName" />
-        </div>
-        <div id="btn-container">
-            <button>Ok</button>
-            <button>Cancel</button>
-        </div>
+      <div>
+        <label for="f-name">First Name</label>
+        <input type="text" id="f-name" name="firstName" />
+      </div>
+      <div>
+        <label for="l-name">Last Name</label>
+        <input type="text" id="l-name" name="lastName" />
+      </div>
+      <div id="div-email">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <div>
+        <label for="nick-name">Nick Name</label>
+        <input type="text" id="nick-name" name="nickName" />
+      </div>
+      <div id="btn-container">
+        <button>Ok</button>
+        <button>Cancel</button>
+      </div>
     </form>
     <form id="rate">
-        <div>
-            <label for="win">Winner</label>
-            <input type="text" id="win" name="winner" />
-        </div>
-        <div>
-            <label for="loose">Looser</label>
-            <input type="text" id="loose" name="looser" />
-        </div>
-        <div>
-            <span id="new-rate"></span>
-        </div>
-        <div class="btn">
-            <button>Calculate</button>
-        </div>
+      <div>
+        <label for="win">Winner</label>
+        <input type="text" id="win" name="winner" />
+      </div>
+      <div>
+        <label for="loose">Looser</label>
+        <input type="text" id="loose" name="looser" />
+      </div>
+      <div>
+        <span id="new-rate"></span>
+      </div>
+      <div class="btn">
+        <button>Calculate</button>
+      </div>
     </form>
     <div id="time"></div>
-</body>
+  </body>
 </html>

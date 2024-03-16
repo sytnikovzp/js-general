@@ -42,7 +42,7 @@ let loosRate;
 
 const winnerInput = document.querySelector('#win');
 const looserInput = document.querySelector('#loose');
-const newRateSpan = document.querySelector('#new-rate');
+export const newRateSpan = document.querySelector('#new-rate');
 const btnCalculate = document.querySelector('.btn > button');
 
 winnerInput.addEventListener('change', (e) => {
@@ -53,6 +53,8 @@ looserInput.addEventListener('change', (e) => {
   loosRate = Number(e.target.value);
   console.log(loosRate);
 });
+
+console.log(winRate,loosRate)
 
 function calculateNewRate(e) {
   e.preventDefault();
